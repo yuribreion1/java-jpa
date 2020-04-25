@@ -18,6 +18,5 @@
 			<artifactId>db2jcc</artifactId>
 			<version>db2jcc4</version>
 		</dependency>
-
 	</dependencies>
 </project>

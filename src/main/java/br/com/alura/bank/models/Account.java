@@ -1,19 +1,17 @@
 package br.com.alura.bank.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Account {
 
 	@Id
-	@GenericGenerator(name = "id_account", strategy = "org.hibernate.id.IncrementGenerator")
-	@GeneratedValue(generator = "id_account")
-	@Column(name = "id")
+
+//	Annotation to auto increment ID
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer branch;
 	private Integer accountNumber;

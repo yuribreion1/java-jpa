@@ -13,7 +13,7 @@ public class ChangeAmount {
 		
 		Account accountWithoutAmount = em.find(Account.class, 1L);
 		em.getTransaction().begin();
-		accountWithoutAmount.setAmount(150.00);
+		accountWithoutAmount.setAccountOwner("Edmilson Breion");
 		em.getTransaction().commit();
 	}
 
