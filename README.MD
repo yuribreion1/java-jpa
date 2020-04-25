@@ -20,3 +20,8 @@ The application created for this case is a banking where the accounts are create
 ## Database
 
 For this project, I'm using DB2 on cloud to avoid any local configuration that is not part of this training
+
+## JPA States
+
+- Managed
+  - During this state, Java specification have entity control in terms of synchronization, every change in each attribute will change de model
