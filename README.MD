@@ -24,4 +24,12 @@ For this project, I'm using DB2 on cloud to avoid any local configuration that i
 ## JPA States
 
 - Managed
-  - During this state, Java specification have entity control in terms of synchronization, every change in each attribute will change de model
+  - During this state, Java specification have entity control in terms of synchronization, every change in each attribute will change the model
+
+- Detached
+ - Every statement outside the EntityManager will be detached, in other words, every change in this moment won't reflect in the model
+ 
+- Removed
+  - This state there is no synchronization with the model and the item was removed from the database
+
+ 
