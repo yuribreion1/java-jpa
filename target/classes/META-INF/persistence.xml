@@ -3,6 +3,7 @@
   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
   <persistence-unit name="bank" transaction-type="RESOURCE_LOCAL">
     <class>br.com.alura.bank.models.Account</class>
+    <class>br.com.alura.bank.models.Transaction</class>
     <properties>
     
       <!-- Database connection parameters -->
