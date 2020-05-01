@@ -2,6 +2,7 @@ package br.com.alura.bank.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -23,11 +25,22 @@ public class Transaction {
 	private LocalDateTime currentDate;
 	private String description;
 
+	@ManyToMany
+	private List<Category> categories;
+
 	@ManyToOne
 	private Account account;
 
 	public Account getAccount() {
 		return account;
+	}
+
+	public List<Category> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
 	}
 
 	public void setAccount(Account account) {
