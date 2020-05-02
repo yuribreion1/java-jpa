@@ -12,8 +12,7 @@
       <property name="javax.persistence.jdbc.user" value="gzf49177" />
       <property name="javax.persistence.jdbc.password" value="b-hxlv84wcffn2rl" />
       <property name="hibernate.dialect" value="org.hibernate.dialect.DB2Dialect"/>
-      <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
-      <property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true" />
+      
       <!-- Properties to print SQL during the execution -->
       <property name="show_sql" value="true"/>
       <property name = "hibernate.show_sql" value = "true" />
