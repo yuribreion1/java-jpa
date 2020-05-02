@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Customer {
@@ -15,8 +17,20 @@ public class Customer {
     private String role;
     private String address;
 
+    @JoinColumn(unique = true)
+    @OneToOne
+    private Account account;
+
     public String getName() {
         return name;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     public String getAddress() {
@@ -38,7 +52,4 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-
-    
-    
 }
